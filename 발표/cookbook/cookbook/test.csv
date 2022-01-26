@@ -1,0 +1,7 @@
+1,2,3,4,5
+'first_name' ,'jason','ban', 'tina', 'jake', 'amy' 
+'last_name','miller',, 'ali','milner', 'coozer'
+'age',42,, 36, 24, 73
+'pretestscore',4,,, 2, 4
+'postestscore',25,,, 62, 72
+'NaNs',,,,
