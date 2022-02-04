@@ -449,3 +449,49 @@ select right('abcdefghi',3);
 -- repeat('문자열', n) : 문자열을 n회 반복
 select repeat('abc', 10);
 
+
+-- lower()
+select lower('abcdEFG');
+-- upper()
+select upper('abcdEFG');
+
+
+-- lpad('문자열1', num, '@') : 문자열 1을 num 크기만큼 자리수를 늘리고 빈자리를 '@'로 채운다
+select lpad('abc', 7, '@');
+-- rpad
+select rpad('abc', 7, '@');
+
+
+-- ltrim, rtrim : 좌우 공백제거
+select ltrim('     abc     ');
+select rtrim('     abc     ');
+
+
+-- replace('문자열1', '문자열2', '문자열3') : 문자열1에서 문자열2를 찾아서 문자열 3으로 치환
+select replace('hello mysql', 'mysql', 'python');
+
+
+-- abs : 절댓값
+select abs(-3);
+
+
+-- ceiling(), floor(), round() : 올림, 내림, 반올림
+select ceiling(4.7);
+select floor(4.7);
+select round(4.7);
+select round(4.3);
+
+# mod : 나머지연산
+select mod(11,2);
+select mod(15,3);
+
+
+-- sqrt : 제곱근
+select sqrt(9);
+
+-- pow : 제곱
+select pow(2,3);
+
+-- length : byte크기
+select length('abd');
+select length('가나다라');
