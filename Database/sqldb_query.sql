@@ -70,7 +70,7 @@ select userid, username, addr from usertbl where addr in ('경남','전남','경
 -- 텍스트 검색
 -- 성이 '김'인 사람의 데이터를 출력
 -- 김% : 첫글자가 김, 뒤에는 아무거나
-select username from usertbl where username like '김%';
+select username from usertbl where username citylike '김%';
 
 -- 이름이 '종신'인 사람의 데이터를 출력
 -- %종신 : 맨 뒤 글자가 종신

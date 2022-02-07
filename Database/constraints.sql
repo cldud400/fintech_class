@@ -31,7 +31,9 @@ create table buytbl(
     groupName char(4) null,
     price int not null,
     amount smallint not null);
-    
+ 
+ 
+ 
 drop table if exists buytbl;
 
 -- usertbl의 userid를 참조해서 foreign key로 사용
@@ -46,6 +48,11 @@ create table buytbl(
     amount smallint not null,
     # constraint로 외래키 이름을 지정해 주면 제거하기도 쉽다
     constraint fk_userid foreign key(userid) references usertbl(userid));
+    # buytbl userid 칼럼은 usertbl의 userid칼럼을 참조 => 데이터의 일치성 유지
+    # buytbl의 userid의 값들은 usertbl에 존재하고 있어야 한다.
+
+# table_name = 'buytbl'인 테이블이 존재하는가?
+select * from information_schema.table_constraints where table_name='buytbl';
     
 insert into usertbl values('LSG', '이승기', 1987, '서울', '011', '11111111', 182, '2008-07-07');
 insert into usertbl values('KBS', '김범수', 1979, '경남', '011', '11111111', 173, '2008-07-07');
@@ -55,7 +62,8 @@ select * from usertbl;
 
 insert into buytbl values(3, 'KBS', '노트북', '전자', 1000, 1);
 insert into buytbl values(1, 'KBS', '운동화', null, 30, 2);
-insert into buytbl values(2, 'JYP', '모니터', '전자', 200, 1);
+# usertbl에 userid = 'JYP'인 데이터가 존재하지 않아 에러가 난다
+insert into buytbl values(2, 'JYP', '모니터', '전자', 200, 1);  -- error
 
 
 desc buytbl;
@@ -78,3 +86,10 @@ create table usertbl(
 ## foreign key 제거하기
 select * from information_schema.table_constraints where table_name = 'buytbl';
 alter table buytbl drop foreign key fk_userid;
+
+
+
+ALTER TABLE userTbl
+	ADD CONSTRAINT PK_userTbl_userID
+    PRIMARY KEY (userID); # 참조받는 테이블의 칼럼은 primary key로 지정되어있어야 한다.
+
