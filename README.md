@@ -7,7 +7,8 @@ kdt 4기
 
 ### 훈련내용
 1. python 기초
-2. pandas를 활용한 데이터 분석
-3. mysql을 활용한 데이터 관리
+2. BeautifulSoup, selenium을 활용한 Crawling
+3. pandas를 활용한 데이터 분석
+4. mysql을 활용한 데이터 관리
 
 
