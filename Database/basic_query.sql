@@ -122,3 +122,9 @@ select * from usertbl;
 -- 김경호라는 가수의 데이터 출력
 
 select * from usertbl where name = '김경호';
+
+
+
+use gmarketdb;
+select * from item;
+select * from ranking;
