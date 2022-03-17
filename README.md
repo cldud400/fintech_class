@@ -10,5 +10,6 @@ kdt 4기
 2. BeautifulSoup, selenium을 활용한 Crawling
 3. pandas를 활용한 데이터 분석
 4. mysql을 활용한 데이터 관리
-
-
+5. pyplot, seaborn을 활용한 데이터 시각화
+6. python tool을 이용한 MachineLearning 모델링
+7. python tool을 이용한 DeepLearning 모델링
